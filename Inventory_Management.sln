@@ -1,22 +1,78 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory_Management", "Inventory_Management\Inventory_Management.csproj", "{652F6AE8-D12B-41D8-AB8B-AF61EDA4112E}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{652F6AE8-D12B-41D8-AB8B-AF61EDA4112E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{652F6AE8-D12B-41D8-AB8B-AF61EDA4112E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{652F6AE8-D12B-41D8-AB8B-AF61EDA4112E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{652F6AE8-D12B-41D8-AB8B-AF61EDA4112E}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
+//Login.cshtml 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+
+
+    <style>
+        .clsLoginWraper{
+            height: 500px;
+            width: 400px;
+/*            border: 1px solid black;*/
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin: auto
+        }
+    </style>
+</head>
+<body>
+    <div id="dvLoginWrapper" class="clsLoginWraper" style="">
+        <div style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; margin: auto; height:300px;width: 90%; border: 0px solid black">
+            @*<h2>Login</h2>*@
+
+            <div class="card text-center">
+                <div class="card-header">
+                    Login
+                </div>
+                <div class="card-body">
+                    @*<h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>*@
+
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <label for="email">User Name/Email address:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter UserName"> <br />
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label> <br />
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter Password">
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox"> Remember me</label>
+                        </div>
+                        @*<button type="submit" class="btn btn-default">Submit</button>*@
+                    </form><br />
+                    <a href="#" class="btn btn-primary">Submit Here</a>
+
+                </div>
+                @*<div class="card-footer text-muted">
+                    2 days ago
+                </div>*@
+            </div>
+            @*UserName <input type="text" id="txtUserName" /> <br />
+            Password <input type="text" id="txtPassword" /> <br />*@
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
